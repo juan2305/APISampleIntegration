@@ -1,10 +1,9 @@
 ﻿using APISampleIntegration.Models;
-using System;
-using System.Collections.Generic;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
+using System.Globalization;
+using Xamarin.Essentials;
 
 namespace APISampleIntegration.Services
 {
@@ -25,6 +24,6 @@ namespace APISampleIntegration.Services
             }
             return null;
         }
-
+     
     }
 }

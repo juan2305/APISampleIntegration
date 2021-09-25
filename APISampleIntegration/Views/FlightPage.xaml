@@ -8,6 +8,6 @@
     </ContentPage.BindingContext>
     <StackLayout>
         <Entry Text="{Binding AirlineCode}"/>
-
+        <Button Text="Find" Command="{Binding}"></Button>
     </StackLayout> 
 </ContentPage>
