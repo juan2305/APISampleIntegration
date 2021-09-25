@@ -31,7 +31,7 @@ namespace APISampleIntegration.Views
             if (response.StatusCode == HttpStatusCode.OK)
             {
                 string content = await response.Content.ReadAsStringAsync();
-                var result = JsonConvert.DeserializeObject<List<FlightResponse>>(content);
+                var result = JsonConvert.DeserializeObject<List<FlightDatum>>(content);
                 FlightList.ItemsSource = result;
             }
            

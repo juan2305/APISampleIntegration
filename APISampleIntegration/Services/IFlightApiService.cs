@@ -8,7 +8,7 @@ namespace APISampleIntegration.Services
 {
    public interface IFlightApiService
     {
-        Task<FlightResponse> GetFlightResponseAsync();
+        Task<FlightResponse> GetFlightInfoAsync();
 
     }
 }

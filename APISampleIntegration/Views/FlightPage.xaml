@@ -6,15 +6,14 @@
     <ContentPage.BindingContext>
         <viewModel:FlightViewModel />
     </ContentPage.BindingContext>
-    <StackLayout>
-        <Entry Text="{Binding AirlineCode}"/>
-        <Button Text="Find" Clicked="Button_Clicked"></Button>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
         <ListView x:Name="FlightList">
-                  <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Origin}" Detail="{Binding Destination}"/>
-            </DataTemplate>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding value}" Detail="{Binding origin}"/>
+                </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+
     </StackLayout> 
 </ContentPage>
