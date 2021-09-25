@@ -8,6 +8,13 @@
     </ContentPage.BindingContext>
     <StackLayout>
         <Entry Text="{Binding AirlineCode}"/>
-        <Button Text="Find" Command="{Binding}"></Button>
+        <Button Text="Find" Clicked="Button_Clicked"></Button>
+        <ListView x:Name="FlightList">
+                  <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Origin}" Detail="{Binding Destination}"/>
+            </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </StackLayout> 
 </ContentPage>

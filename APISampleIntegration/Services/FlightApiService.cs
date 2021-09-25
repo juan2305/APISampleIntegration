@@ -1,4 +1,5 @@
 ﻿using APISampleIntegration.Models;
+using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -9,12 +10,12 @@ namespace APISampleIntegration.Services
 {
     public class FlightApiService : IFlightApiService
     {
-        private const string ApiAccessKey = "876592c360msh2dbf5b49f00cdf7p150db8jsnc971a9d56da4";
+        private const string ApiAccessKey = "54584c8325755dc2dbad7aadad6df16a";
        // private const string ApiAccessKey = "YOUR ACCESS KEY";
         public async Task<FlightResponse> GetFlightResponseAsync()
         {
            HttpClient httpClient = new HttpClient();
-          var response = await httpClient.GetAsync($"https://rapidapi.com/Travelpayouts/api/flight-data?access_key={ApiAccessKey}");
+          var response = await httpClient.GetAsync($"https://api.travelpayouts.com/v2/prices/latest?currency=usd&period_type=year&page=1&limit=30&show_to_affiliates=true&sorting=price&trip_class=0&token={ApiAccessKey}");
        
           if (response.IsSuccessStatusCode)
             {
@@ -24,6 +25,6 @@ namespace APISampleIntegration.Services
             }
             return null;
         }
-     
-    }
+      
+}
 }
