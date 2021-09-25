@@ -1,4 +1,5 @@
-﻿using System;
+﻿using APISampleIntegration.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,7 +11,7 @@ namespace APISampleIntegration
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new FlightPage();
         }
 
         protected override void OnStart()
